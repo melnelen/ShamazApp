@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var storytellingTask: UILabel!
+    
+    @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
     }
-
-
+    
+    @IBAction func generetePastStorytellingTask(_ sender: Any) {
+    }
+    
+    
 }
 
