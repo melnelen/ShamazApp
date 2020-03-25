@@ -8,6 +8,7 @@ on: # rebuild any PRs and main branch changes
 
 jobs:
   build: # make sure build/ci work properly
+    name: Build
     timeout-minutes: 30
     
     runs-on: macos-latest
@@ -17,7 +18,8 @@ jobs:
 
     steps:
       - name: Checkout
-      - uses: actions/checkout@v2
+        uses: actions/checkout@v2
+
 #       - name: Build
 #         run: |
 #           cd Shamaz
