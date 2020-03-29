@@ -38,11 +38,11 @@ class ViewController: UIViewController {
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
         //generate random future story start phrase
-        let randomFutureStoryStartPhraseIndex = Int.random(in: 0...Phrase.futureStoryStartPhrases.count)
+        let randomFutureStoryStartPhraseIndex = Int.random(in: 0..<Phrase.futureStoryStartPhrases.count)
         let randomFutureStoryStartPhrase = Phrase.futureStoryStartPhrases[randomFutureStoryStartPhraseIndex]
         
         //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0...Phrase.timeIndicators.count)
+        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrase.timeIndicators.count)
         let randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
         
         //modify the label
@@ -52,11 +52,11 @@ class ViewController: UIViewController {
     
     @IBAction func generetePastStorytellingTask(_ sender: Any) {
         //generate random past story start phrase
-        let randomPastStoryStartPhraseIndex = Int.random(in: 0...Phrase.pastStoryStartPhrases.count)
+        let randomPastStoryStartPhraseIndex = Int.random(in: 0..<Phrase.pastStoryStartPhrases.count)
         let randomPastStoryStartPhrase = Phrase.pastStoryStartPhrases[randomPastStoryStartPhraseIndex]
         
         //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0...Phrase.timeIndicators.count)
+        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrase.timeIndicators.count)
         let randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
         
         //modify the label
