@@ -12,8 +12,8 @@
 		D02ACE18242808BA003938D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02ACE17242808BA003938D1 /* ViewController.swift */; };
 		D02ACE1B242808BA003938D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02ACE19242808BA003938D1 /* Main.storyboard */; };
 		D02ACE1D242808BC003938D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02ACE1C242808BC003938D1 /* Assets.xcassets */; };
-		D02ACE20242808BC003938D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02ACE1E242808BC003938D1 /* LaunchScreen.storyboard */; };
 		D02D1AAB2431579900DE9B6F /* phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D1AAA2431579900DE9B6F /* phrases.swift */; };
+		D02D1AB42432804B00DE9B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02D1AB22432804B00DE9B6F /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,10 @@
 		D02ACE17242808BA003938D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D02ACE1A242808BA003938D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D02ACE1C242808BC003938D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D02ACE1F242808BC003938D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02ACE21242808BC003938D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D02D1AAA2431579900DE9B6F /* phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phrases.swift; sourceTree = "<group>"; };
+		D02D1AB12432787900DE9B6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		D02D1AB32432804B00DE9B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +65,7 @@
 				D02ACE17242808BA003938D1 /* ViewController.swift */,
 				D02ACE19242808BA003938D1 /* Main.storyboard */,
 				D02ACE1C242808BC003938D1 /* Assets.xcassets */,
-				D02ACE1E242808BC003938D1 /* LaunchScreen.storyboard */,
+				D02D1AB22432804B00DE9B6F /* LaunchScreen.storyboard */,
 				D02ACE21242808BC003938D1 /* Info.plist */,
 			);
 			path = Shamaz;
@@ -128,7 +129,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D02ACE20242808BC003938D1 /* LaunchScreen.storyboard in Resources */,
+				D02D1AB42432804B00DE9B6F /* LaunchScreen.storyboard in Resources */,
 				D02ACE1D242808BC003938D1 /* Assets.xcassets in Resources */,
 				D02ACE1B242808BA003938D1 /* Main.storyboard in Resources */,
 			);
@@ -155,14 +156,15 @@
 			isa = PBXVariantGroup;
 			children = (
 				D02ACE1A242808BA003938D1 /* Base */,
+				D02D1AB12432787900DE9B6F /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		D02ACE1E242808BC003938D1 /* LaunchScreen.storyboard */ = {
+		D02D1AB22432804B00DE9B6F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D02ACE1F242808BC003938D1 /* Base */,
+				D02D1AB32432804B00DE9B6F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -290,6 +292,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shamaz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -297,7 +300,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanova.Shamaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,6 +310,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shamaz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,7 +318,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexivanova.Shamaz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

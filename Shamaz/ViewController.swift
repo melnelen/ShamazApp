@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController {
 
     @IBOutlet weak var futureButton: UIButton!
@@ -43,10 +44,29 @@ class ViewController: UIViewController {
         
         //generate random time indicator
         let randomTimeIndicatorIndex = Int.random(in: 0..<Phrase.timeIndicators.count)
-        let randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
+        var randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
         
+        //create the new future storytelling task pharase
+        var newFutureStorytellingTask = "?"
+        switch randomTimeIndicator {
+        case "1 day":
+            randomTimeIndicator = "tomorrow"
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 week":
+            randomTimeIndicator = "next week"
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 month":
+            randomTimeIndicator = "next month"
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 year":
+            randomTimeIndicator = "next year"
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+        default:
+            randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.futureStoryEndPhrase + "?"
+        }
+
         //modify the label
-        let newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.futureStoryEndPhrase + "?"
         storytellingTask.text = newFutureStorytellingTask
     }
     
@@ -57,10 +77,29 @@ class ViewController: UIViewController {
         
         //generate random time indicator
         let randomTimeIndicatorIndex = Int.random(in: 0..<Phrase.timeIndicators.count)
-        let randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
+        var randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
+        
+        //create the new future storytelling task pharase
+        var newPastStorytellingTask = "?"
+        switch randomTimeIndicator {
+        case "1 day":
+            randomTimeIndicator = "yesterday"
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 week":
+            randomTimeIndicator = "last week"
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 month":
+            randomTimeIndicator = "last month"
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+        case "1 year":
+            randomTimeIndicator = "last year"
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+        default:
+            randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.pastStoryEndPhrase + "?"
+        }
         
         //modify the label
-        let newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.pastStoryEndPhrase + "?"
         storytellingTask.text = newPastStorytellingTask
     }
     
