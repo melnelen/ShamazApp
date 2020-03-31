@@ -10,10 +10,10 @@ import UIKit
 
 @available(iOS 13.0, *)
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var futureButton: UIButton!
     @IBOutlet weak var pastButton: UIButton!
-    @IBOutlet weak var storytellingTask: UILabel!
+    @IBOutlet weak var nextPlayer: UILabel!
     
     let appTextColor = UIColor(white: 1.00, alpha: 1.00)
     let appLabelFont = UIFont(name: "Chalkduster", size: 30.0)
@@ -24,17 +24,23 @@ class ViewController: UIViewController {
     
     let Phrase = Phrases()
     
+    var playersTaskPhrase = ""
+    var recievedPhrase = "Ready, Player 1?"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         futureButton.layer.cornerRadius = appButtonRadius
         futureButton.layer.backgroundColor = appLightGreenColor
+        futureButton.setTitle("DREAM of the future", for: [])
         
         pastButton.layer.cornerRadius = appButtonRadius
         pastButton.layer.backgroundColor = appLightBlueColor
+        pastButton.setTitle("REFLECT on the past", for: [])
         
-        storytellingTask.textColor = appTextColor
-        storytellingTask.font = appLabelFont
+        nextPlayer.textColor = appTextColor
+        nextPlayer.font = appLabelFont
+        nextPlayer.text = recievedPhrase
     }
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
@@ -65,9 +71,9 @@ class ViewController: UIViewController {
             randomTimeIndicator = Phrase.timeIndicators[randomTimeIndicatorIndex]
             newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.futureStoryEndPhrase + "?"
         }
-
-        //modify the label
-        storytellingTask.text = newFutureStorytellingTask
+        
+        //save new created phrase
+        playersTaskPhrase = newFutureStorytellingTask
     }
     
     @IBAction func generetePastStorytellingTask(_ sender: Any) {
@@ -99,10 +105,16 @@ class ViewController: UIViewController {
             newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + Phrase.pastStoryEndPhrase + "?"
         }
         
-        //modify the label
-        storytellingTask.text = newPastStorytellingTask
+        //save new created phrase
+        playersTaskPhrase = newPastStorytellingTask
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //modify the label for the player's task
+        let newVC: SecondViewController = segue.destination as! SecondViewController
+        newVC.recievedPhrase = playersTaskPhrase
+    }
     
 }
 
