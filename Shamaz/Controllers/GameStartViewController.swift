@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameSatrtViewController: UIViewController {
     
     @IBOutlet weak var futureButton: UIButton!
     @IBOutlet weak var pastButton: UIButton!
@@ -104,7 +104,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the player's task
-        let newVC: SecondViewController = segue.destination as! SecondViewController
+        let newVC: PlayersTaskViewController = segue.destination as! PlayersTaskViewController
         newVC.receivedPhrase = playersTaskPhrase
     }
 }

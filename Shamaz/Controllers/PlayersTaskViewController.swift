@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class PlayersTaskViewController: UIViewController {
 
     @IBOutlet weak var nextPlayerButton: UIButton!
     @IBOutlet weak var playerTaskLabel: UILabel!
@@ -36,7 +36,7 @@ class SecondViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the next player
-        let newVC: ViewController = segue.destination as! ViewController
+        let newVC: GameSatrtViewController = segue.destination as! GameSatrtViewController
         newVC.receivedPhrase = nextPlayerPhrase
     }
 }
