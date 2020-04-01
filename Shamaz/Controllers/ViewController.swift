@@ -15,38 +15,35 @@ class ViewController: UIViewController {
     @IBOutlet weak var pastButton: UIButton!
     @IBOutlet weak var nextPlayer: UILabel!
     
-    let design = Design()
-    let phrases = Phrases()
-    
     var playersTaskPhrase = ""
     var recievedPhrase = "Ready, Player 1?"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        futureButton.layer.cornerRadius = design.buttonRadius
-        futureButton.backgroundColor = design.lightGreenColor
-        futureButton.setTitleColor(design.midnightBlue, for: [])
+        futureButton.layer.cornerRadius = Design.buttonRadius
+        futureButton.backgroundColor = Design.firstChoiceColor
+        futureButton.setTitleColor(Design.primaryThemeColor, for: [])
         futureButton.setTitle("DREAM of the future", for: [])
         
-        pastButton.layer.cornerRadius = design.buttonRadius
-        pastButton.backgroundColor = design.lightBlueColor
-        pastButton.setTitleColor(design.midnightBlue, for: [])
+        pastButton.layer.cornerRadius = Design.buttonRadius
+        pastButton.backgroundColor = Design.secondChoiceColor
+        pastButton.setTitleColor(Design.primaryThemeColor, for: [])
         pastButton.setTitle("REFLECT on the past", for: [])
         
-        nextPlayer.textColor = design.textColor
-        nextPlayer.font = design.labelFont
+        nextPlayer.textColor = Design.textColor
+        nextPlayer.font = Design.labelFont
         nextPlayer.text = recievedPhrase
     }
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
         //generate random future story start phrase
-        let randomFutureStoryStartPhraseIndex = Int.random(in: 0..<phrases.futureStoryStartPhrases.count)
-        let randomFutureStoryStartPhrase = phrases.futureStoryStartPhrases[randomFutureStoryStartPhraseIndex]
+        let randomFutureStoryStartPhraseIndex = Int.random(in: 0..<Phrases.futureStoryStartPhrases.count)
+        let randomFutureStoryStartPhrase = Phrases.futureStoryStartPhrases[randomFutureStoryStartPhraseIndex]
         
         //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0..<phrases.timeIndicators.count)
-        var randomTimeIndicator = phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
+        var randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
         
         //create the new future storytelling task pharase
         var newFutureStorytellingTask = "?"
@@ -64,8 +61,8 @@ class ViewController: UIViewController {
             randomTimeIndicator = "next year"
             newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
         default:
-            randomTimeIndicator = phrases.timeIndicators[randomTimeIndicatorIndex]
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + phrases.futureStoryEndPhrase + "?"
+            randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + Phrases.futureStoryEndPhrase + "?"
         }
         
         //save new created phrase
@@ -74,12 +71,12 @@ class ViewController: UIViewController {
     
     @IBAction func generetePastStorytellingTask(_ sender: Any) {
         //generate random past story start phrase
-        let randomPastStoryStartPhraseIndex = Int.random(in: 0..<phrases.pastStoryStartPhrases.count)
-        let randomPastStoryStartPhrase = phrases.pastStoryStartPhrases[randomPastStoryStartPhraseIndex]
+        let randomPastStoryStartPhraseIndex = Int.random(in: 0..<Phrases.pastStoryStartPhrases.count)
+        let randomPastStoryStartPhrase = Phrases.pastStoryStartPhrases[randomPastStoryStartPhraseIndex]
         
         //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0..<phrases.timeIndicators.count)
-        var randomTimeIndicator = phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
+        var randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
         
         //create the new future storytelling task pharase
         var newPastStorytellingTask = "?"
@@ -97,8 +94,8 @@ class ViewController: UIViewController {
             randomTimeIndicator = "last year"
             newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
         default:
-            randomTimeIndicator = phrases.timeIndicators[randomTimeIndicatorIndex]
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + phrases.pastStoryEndPhrase + "?"
+            randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + Phrases.pastStoryEndPhrase + "?"
         }
         
         //save new created phrase

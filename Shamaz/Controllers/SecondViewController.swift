@@ -18,18 +18,16 @@ class SecondViewController: UIViewController {
     var nextPlayerPhrase = ""
     var nextPlayerNumber = Int.random(in: 1...10)
     
-    let design = Design()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextPlayerButton.layer.cornerRadius = design.buttonRadius
+        nextPlayerButton.layer.cornerRadius = Design.buttonRadius
         nextPlayerButton.backgroundColor = .white
-        nextPlayerButton.setTitleColor(design.midnightBlue, for: [])
+        nextPlayerButton.setTitleColor(Design.primaryThemeColor, for: [])
         nextPlayerButton.setTitle("Who's NeXT?", for: [])
         
-        playerTaskLabel.textColor = design.textColor
-        playerTaskLabel.font = design.labelFont
+        playerTaskLabel.textColor = Design.textColor
+        playerTaskLabel.font = Design.labelFont
         playerTaskLabel.text = recievedPhrase
     }
     
