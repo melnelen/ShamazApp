@@ -18,12 +18,14 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-gk-s0H">
                                 <rect key="frame" x="60" y="440" width="255" height="85"/>
-                                <color key="backgroundColor" red="0.41568627450980389" green="0.7803921568627451" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.52549019607843139" green="1" blue="0.63620915032679748" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="YAI-eG-c2k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                                <state key="normal" title="DREAM of the future"/>
+                                <state key="normal" title="DREAM of the future">
+                                    <color key="titleColor" red="0.1333333333" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="genereteFutureStorytellingTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5mw-4Z-A53"/>
                                     <segue destination="gtq-3G-tQB" kind="show" id="3wU-jp-M0f"/>
@@ -31,12 +33,14 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Lw-IVh">
                                 <rect key="frame" x="60" y="613" width="255" height="85"/>
-                                <color key="backgroundColor" red="0.36214508599072387" green="0.7588195474422883" blue="0.78836849616802029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.44705882352941173" green="1" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="85" id="wab-Z3-GMF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
-                                <state key="normal" title="REFLECT on the past"/>
+                                <state key="normal" title="REFLECT on the past">
+                                    <color key="titleColor" red="0.1333333333" green="0.1647058824" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                                 <connections>
                                     <action selector="generetePastStorytellingTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Hb-bk-dnx"/>
                                     <segue destination="gtq-3G-tQB" kind="show" id="58Z-61-5mR"/>
@@ -52,7 +56,7 @@
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.13416793942451477" green="0.16343939304351807" blue="0.21961495280265808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.13333333333333333" green="0.16470588235294117" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ZlR-Lw-IVh" firstAttribute="top" secondItem="wVm-gk-s0H" secondAttribute="bottom" constant="88" id="1KN-FF-s78"/>

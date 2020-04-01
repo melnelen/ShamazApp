@@ -14,27 +14,22 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nextPlayerButton: UIButton!
     @IBOutlet weak var playerTaskLabel: UILabel!
     
-    let appTextColor = UIColor(white: 1.00, alpha: 1.00)
-    let appLabelFont = UIFont(name: "Chalkduster", size: 30.0)
-    let appButtonFont = UIFont(name: "Chalkduster", size: 20.0)
-    let appButtonRadius:CGFloat = 5.00
-    let appLightGreenColor = UIColor(red:0.42, green:0.78, blue:0.61, alpha:1.00)
-    let appLightBlueColor = UIColor(red: 0.13, green: 0.77, blue: 0.80, alpha: 1.00)
-    
     var recievedPhrase = "Player's task"
     var nextPlayerPhrase = ""
     var nextPlayerNumber = Int.random(in: 1...10)
     
+    let design = Design()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nextPlayerButton.layer.cornerRadius = appButtonRadius
-        nextPlayerButton.backgroundColor = appLightBlueColor
+        nextPlayerButton.layer.cornerRadius = design.buttonRadius
+        nextPlayerButton.backgroundColor = .white
+        nextPlayerButton.setTitleColor(design.midnightBlue, for: [])
         nextPlayerButton.setTitle("Who's NeXT?", for: [])
         
-        playerTaskLabel.textColor = appTextColor
-        playerTaskLabel.font = appLabelFont
+        playerTaskLabel.textColor = design.textColor
+        playerTaskLabel.font = design.labelFont
         playerTaskLabel.text = recievedPhrase
     }
     
@@ -47,16 +42,4 @@ class SecondViewController: UIViewController {
         let newVC: ViewController = segue.destination as! ViewController
         newVC.recievedPhrase = nextPlayerPhrase
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
