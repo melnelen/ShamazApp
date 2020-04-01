@@ -18,8 +18,8 @@ class SecondViewController: UIViewController {
     let appLabelFont = UIFont(name: "Chalkduster", size: 30.0)
     let appButtonFont = UIFont(name: "Chalkduster", size: 20.0)
     let appButtonRadius:CGFloat = 5.00
-    let appLightGreenColor = CGColor(srgbRed: 0.25, green: 0.80, blue: 0.60, alpha: 1.00)
-    let appLightBlueColor = CGColor(srgbRed: 0.13, green: 0.77, blue: 0.80, alpha: 1.00)
+    let appLightGreenColor = UIColor(red:0.42, green:0.78, blue:0.61, alpha:1.00)
+    let appLightBlueColor = UIColor(red: 0.13, green: 0.77, blue: 0.80, alpha: 1.00)
     
     var recievedPhrase = "Player's task"
     var nextPlayerPhrase = ""
@@ -30,7 +30,7 @@ class SecondViewController: UIViewController {
         super.viewDidLoad()
         
         nextPlayerButton.layer.cornerRadius = appButtonRadius
-        nextPlayerButton.layer.backgroundColor = appLightBlueColor
+        nextPlayerButton.backgroundColor = appLightBlueColor
         nextPlayerButton.setTitle("Who's NeXT?", for: [])
         
         playerTaskLabel.textColor = appTextColor
