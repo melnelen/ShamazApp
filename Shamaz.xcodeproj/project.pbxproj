@@ -12,10 +12,10 @@
 		D02ACE18242808BA003938D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02ACE17242808BA003938D1 /* ViewController.swift */; };
 		D02ACE1B242808BA003938D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02ACE19242808BA003938D1 /* Main.storyboard */; };
 		D02ACE1D242808BC003938D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02ACE1C242808BC003938D1 /* Assets.xcassets */; };
-		D02D1AAB2431579900DE9B6F /* phrases.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D1AAA2431579900DE9B6F /* phrases.swift */; };
+		D02D1AAB2431579900DE9B6F /* phrases2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D1AAA2431579900DE9B6F /* phrases2.swift */; };
 		D02D1AB42432804B00DE9B6F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02D1AB22432804B00DE9B6F /* LaunchScreen.storyboard */; };
 		D02D1AB82432AF1500DE9B6F /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02D1AB72432AF1400DE9B6F /* SecondViewController.swift */; };
-		D04ADC612434C5360046EACC /* design.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04ADC602434C5360046EACC /* design.swift */; };
+		D04ADC612434C5360046EACC /* design2.swift in Sources */ = {isa = PBXBuildFile; fileRef = D04ADC602434C5360046EACC /* design2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,11 +26,11 @@
 		D02ACE1A242808BA003938D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D02ACE1C242808BC003938D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02ACE21242808BC003938D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D02D1AAA2431579900DE9B6F /* phrases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phrases.swift; sourceTree = "<group>"; };
+		D02D1AAA2431579900DE9B6F /* phrases2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = phrases2.swift; sourceTree = "<group>"; };
 		D02D1AB12432787900DE9B6F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		D02D1AB32432804B00DE9B6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02D1AB72432AF1400DE9B6F /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		D04ADC602434C5360046EACC /* design.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = design.swift; sourceTree = "<group>"; };
+		D04ADC602434C5360046EACC /* design2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = design2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,8 +65,8 @@
 			children = (
 				D02ACE13242808BA003938D1 /* AppDelegate.swift */,
 				D02ACE15242808BA003938D1 /* SceneDelegate.swift */,
-				D04ADC602434C5360046EACC /* design.swift */,
-				D02D1AAA2431579900DE9B6F /* phrases.swift */,
+				D04ADC602434C5360046EACC /* design2.swift */,
+				D02D1AAA2431579900DE9B6F /* phrases2.swift */,
 				D02ACE17242808BA003938D1 /* ViewController.swift */,
 				D02D1AB72432AF1400DE9B6F /* SecondViewController.swift */,
 				D02ACE19242808BA003938D1 /* Main.storyboard */,
@@ -150,8 +150,8 @@
 			files = (
 				D02ACE18242808BA003938D1 /* ViewController.swift in Sources */,
 				D02ACE14242808BA003938D1 /* AppDelegate.swift in Sources */,
-				D02D1AAB2431579900DE9B6F /* phrases.swift in Sources */,
-				D04ADC612434C5360046EACC /* design.swift in Sources */,
+				D02D1AAB2431579900DE9B6F /* phrases2.swift in Sources */,
+				D04ADC612434C5360046EACC /* design2.swift in Sources */,
 				D02D1AB82432AF1500DE9B6F /* SecondViewController.swift in Sources */,
 				D02ACE16242808BA003938D1 /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +300,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shamaz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,7 +318,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Shamaz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
