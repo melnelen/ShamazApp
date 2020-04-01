@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment version="4352" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,29 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-gk-s0H">
-                                <rect key="frame" x="61" y="487" width="293" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.41711147620361244" green="0.77940593274111669" blue="0.6124728724102011" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="wVm-gk-s0H">
+                                <rect key="frame" x="60" y="484" width="294" height="85"/>
+                                <color key="backgroundColor" red="0.41568627450980389" green="0.7803921568627451" blue="0.61176470588235299" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="YAI-eG-c2k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 <state key="normal" title="DREAM of the future"/>
                                 <connections>
                                     <action selector="genereteFutureStorytellingTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5mw-4Z-A53"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Lw-IVh">
-                                <rect key="frame" x="61" y="657" width="293" height="88"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZlR-Lw-IVh">
+                                <rect key="frame" x="60" y="657" width="294" height="85"/>
                                 <color key="backgroundColor" red="0.36214508599072387" green="0.7588195474422883" blue="0.78836849616802029" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="wab-Z3-GMF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 <state key="normal" title="REFLECT on the past"/>
                                 <connections>
                                     <action selector="generetePastStorytellingTask:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Hb-bk-dnx"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ready, Player 1?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-3s-yx8">
-                                <rect key="frame" x="20" y="44" width="374" height="429"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready, Player 1?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LJ0-3s-yx8">
+                                <rect key="frame" x="20" y="44" width="374" height="420"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="420" id="ZEN-2F-ypD"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="30"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,9 +52,27 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13416793942451477" green="0.16343939304351807" blue="0.21961495280265808" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZlR-Lw-IVh" firstAttribute="top" secondItem="wVm-gk-s0H" secondAttribute="bottom" constant="88" id="1KN-FF-s78"/>
+                            <constraint firstItem="wVm-gk-s0H" firstAttribute="top" secondItem="LJ0-3s-yx8" secondAttribute="bottom" constant="20" id="Nnw-AS-iDU"/>
+                            <constraint firstItem="LJ0-3s-yx8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OPC-Xr-Hus"/>
+                            <constraint firstItem="LJ0-3s-yx8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VWj-H9-DV7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZlR-Lw-IVh" secondAttribute="trailing" constant="60" id="WP8-vT-Mnl"/>
+                            <constraint firstItem="wVm-gk-s0H" firstAttribute="top" secondItem="LJ0-3s-yx8" secondAttribute="bottom" constant="20" id="XNr-Xh-XIa"/>
+                            <constraint firstItem="LJ0-3s-yx8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aYT-le-DYl"/>
+                            <constraint firstItem="ZlR-Lw-IVh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="dHn-Ul-ljz"/>
+                            <constraint firstItem="wVm-gk-s0H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="dTr-13-dWV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJ0-3s-yx8" secondAttribute="trailing" constant="20" id="kiu-HQ-C1q"/>
+                            <constraint firstItem="LJ0-3s-yx8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ssl-3w-VbM"/>
+                            <constraint firstItem="wVm-gk-s0H" firstAttribute="top" secondItem="LJ0-3s-yx8" secondAttribute="bottom" constant="20" id="uIr-dQ-yqz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LJ0-3s-yx8" secondAttribute="trailing" constant="20" id="wNu-6L-hJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wVm-gk-s0H" secondAttribute="trailing" constant="60" id="yXz-4U-NKU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="futureButton" destination="wVm-gk-s0H" id="IYz-hx-7HQ"/>
+                        <outlet property="pastButton" destination="ZlR-Lw-IVh" id="lT8-xy-XWQ"/>
                         <outlet property="storytellingTask" destination="LJ0-3s-yx8" id="ukw-sZ-lhP"/>
                     </connections>
                 </viewController>

@@ -10,6 +10,30 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var futureButton: UIButton!
+    @IBOutlet weak var pastButton: UIButton!
+    @IBOutlet weak var storytellingTask: UILabel!
+    
+    let appTextColor = UIColor(white: 1.00, alpha: 1.00)
+    let appLabelFont = UIFont(name: "Chalkduster", size: 30.0)
+    let appButtonFont = UIFont(name: "Chalkduster", size: 20.0)
+    let appButtonRadius:CGFloat = 5.00
+    let appLightGreenColor = CGColor(srgbRed: 0.25, green: 0.80, blue: 0.60, alpha: 1.00)
+    let appLightBlueColor = CGColor(srgbRed: 0.13, green: 0.77, blue: 0.80, alpha: 1.00)
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        futureButton.layer.cornerRadius = appButtonRadius
+        futureButton.layer.backgroundColor = appLightGreenColor
+        
+        pastButton.layer.cornerRadius = appButtonRadius
+        pastButton.layer.backgroundColor = appLightBlueColor
+        
+        storytellingTask.textColor = appTextColor
+        storytellingTask.font = appLabelFont
+    }
+    
     let futureStoryStartPhrases = ["What would you like to be doing", "What would you like to have for dinner", "Where would you like to be", "Who would you like to meet", "Who would you like to be with"]
     
     let pastStoryStartPhrases = ["What did you do", "Where were you", "What did you have for breakfast", "What did you have for dinner", "What did you wear", "Who did you talk to", "Who did you meet"]
@@ -20,7 +44,7 @@ class ViewController: UIViewController {
     
     let pastStoryEndPhrase = "ago"
     
-    @IBOutlet weak var storytellingTask: UILabel!
+    
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
         //generate random future story start phrase
