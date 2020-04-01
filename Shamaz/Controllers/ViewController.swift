@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var nextPlayer: UILabel!
     
     var playersTaskPhrase = ""
-    var recievedPhrase = "Ready, Player 1?"
+    var receivedPhrase = "Ready, Player 1?"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
         nextPlayer.textColor = Design.textColor
         nextPlayer.font = Design.labelFont
-        nextPlayer.text = recievedPhrase
+        nextPlayer.text = receivedPhrase
     }
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
@@ -105,6 +105,6 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the player's task
         let newVC: SecondViewController = segue.destination as! SecondViewController
-        newVC.recievedPhrase = playersTaskPhrase
+        newVC.receivedPhrase = playersTaskPhrase
     }
 }

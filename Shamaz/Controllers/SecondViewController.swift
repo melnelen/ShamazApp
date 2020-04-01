@@ -13,7 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var nextPlayerButton: UIButton!
     @IBOutlet weak var playerTaskLabel: UILabel!
     
-    var recievedPhrase = "Player's task"
+    var receivedPhrase = "Player's task"
     var nextPlayerPhrase = ""
     var nextPlayerNumber = Int.random(in: 1...10)
     
@@ -27,7 +27,7 @@ class SecondViewController: UIViewController {
         
         playerTaskLabel.textColor = Design.textColor
         playerTaskLabel.font = Design.labelFont
-        playerTaskLabel.text = recievedPhrase
+        playerTaskLabel.text = receivedPhrase
     }
     
     @IBAction func generateNextPlayer(_ sender: Any) {
@@ -37,6 +37,6 @@ class SecondViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the next player
         let newVC: ViewController = segue.destination as! ViewController
-        newVC.recievedPhrase = nextPlayerPhrase
+        newVC.receivedPhrase = nextPlayerPhrase
     }
 }
