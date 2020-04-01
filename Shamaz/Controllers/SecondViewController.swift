@@ -8,7 +8,6 @@
 
 import UIKit
 
-@available(iOS 13.0, *)
 class SecondViewController: UIViewController {
 
     @IBOutlet weak var nextPlayerButton: UIButton!
