@@ -36,7 +36,7 @@ class PlayersTaskViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the next player
-        let newVC: GameSatrtViewController = segue.destination as! GameSatrtViewController
+        let newVC: GameStartViewController = segue.destination as! GameStartViewController
         newVC.receivedPhrase = nextPlayerPhrase
     }
 }

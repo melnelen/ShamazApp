@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GameSatrtViewController: UIViewController {
+class GameStartViewController: UIViewController {
     
     @IBOutlet weak var futureButton: UIButton!
     @IBOutlet weak var pastButton: UIButton!
