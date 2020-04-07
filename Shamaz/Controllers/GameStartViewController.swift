@@ -49,19 +49,19 @@ class GameStartViewController: UIViewController {
         switch randomTimeIndicator {
         case "1 day":
             randomTimeIndicator = "tomorrow"
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 week":
             randomTimeIndicator = "next week"
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 month":
             randomTimeIndicator = "next month"
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 year":
             randomTimeIndicator = "next year"
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
         default:
             randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
-            newFutureStorytellingTask = randomFutureStoryStartPhrase + " " + randomTimeIndicator + " " + Phrases.futureStoryEndPhrase + "?"
+            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator) \(Phrases.futureStoryEndPhrase)?"
         }
         
         //save new created phrase
@@ -82,19 +82,19 @@ class GameStartViewController: UIViewController {
         switch randomTimeIndicator {
         case "1 day":
             randomTimeIndicator = "yesterday"
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 week":
             randomTimeIndicator = "last week"
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 month":
             randomTimeIndicator = "last month"
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
         case "1 year":
             randomTimeIndicator = "last year"
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + "?"
+            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
         default:
             randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
-            newPastStorytellingTask = randomPastStoryStartPhrase + " " + randomTimeIndicator + " " + Phrases.pastStoryEndPhrase + "?"
+            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator) \(Phrases.pastStoryEndPhrase)?"
         }
         
         //save new created phrase
