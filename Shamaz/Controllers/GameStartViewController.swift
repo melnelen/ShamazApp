@@ -15,7 +15,7 @@ class GameStartViewController: UIViewController {
     @IBOutlet weak var nextPlayer: UILabel!
     
     var playersTaskPhrase = ""
-    var receivedPhrase = "Ready, Player 1?"
+    var receivedPhrase = "\(Phrases.nextPlayer) 1?"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,12 @@ class GameStartViewController: UIViewController {
         futureButton.layer.cornerRadius = Design.buttonRadius
         futureButton.backgroundColor = Design.firstChoiceColor
         futureButton.setTitleColor(Design.primaryThemeColor, for: [])
-        futureButton.setTitle("DREAM of the future", for: [])
+        futureButton.setTitle("\(Phrases.futureButton)", for: [])
         
         pastButton.layer.cornerRadius = Design.buttonRadius
         pastButton.backgroundColor = Design.secondChoiceColor
         pastButton.setTitleColor(Design.primaryThemeColor, for: [])
-        pastButton.setTitle("REFLECT on the past", for: [])
+        pastButton.setTitle("\(Phrases.pastButton)", for: [])
         
         nextPlayer.textColor = Design.textColor
         nextPlayer.font = Design.labelFont
@@ -42,26 +42,21 @@ class GameStartViewController: UIViewController {
         
         //generate random time indicator
         let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
-        var randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
         
         //create the new future storytelling task pharase
-        var newFutureStorytellingTask = "?"
+        var newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) "
         switch randomTimeIndicator {
-        case "1 day":
-            randomTimeIndicator = "tomorrow"
-            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 week":
-            randomTimeIndicator = "next week"
-            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 month":
-            randomTimeIndicator = "next month"
-            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 year":
-            randomTimeIndicator = "next year"
-            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator)?"
+        case Phrases.oneDay:
+            newFutureStorytellingTask += improvePhrase(with: Phrases.oneDayInTheFuture)
+        case Phrases.oneWeek:
+            newFutureStorytellingTask += improvePhrase(with: Phrases.oneWeekInTheFuture)
+        case Phrases.oneMonth:
+            newFutureStorytellingTask += improvePhrase(with: Phrases.oneMonthInTheFuture)
+        case Phrases.oneYear:
+            newFutureStorytellingTask += improvePhrase(with: Phrases.oneYearInTheFuture)
         default:
-            randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
-            newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) \(randomTimeIndicator) \(Phrases.futureStoryEndPhrase)?"
+            newFutureStorytellingTask += "\(randomTimeIndicator) \(Phrases.futureStoryEndPhrase)?"
         }
         
         //save new created phrase
@@ -75,32 +70,30 @@ class GameStartViewController: UIViewController {
         
         //generate random time indicator
         let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
-        var randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
         
         //create the new future storytelling task pharase
-        var newPastStorytellingTask = "?"
+        var newPastStorytellingTask = "\(randomPastStoryStartPhrase) "
         switch randomTimeIndicator {
-        case "1 day":
-            randomTimeIndicator = "yesterday"
-            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 week":
-            randomTimeIndicator = "last week"
-            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 month":
-            randomTimeIndicator = "last month"
-            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
-        case "1 year":
-            randomTimeIndicator = "last year"
-            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator)?"
+        case Phrases.oneDay:
+            newPastStorytellingTask += improvePhrase(with: Phrases.oneDayInThePast)
+        case Phrases.oneWeek:
+            newPastStorytellingTask += improvePhrase(with: Phrases.oneWeekInThePast)
+        case Phrases.oneMonth:
+            newPastStorytellingTask += improvePhrase(with: Phrases.oneMonthInThePast)
+        case Phrases.oneYear:
+            newPastStorytellingTask += improvePhrase(with: Phrases.oneYearInThePast)
         default:
-            randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
-            newPastStorytellingTask = "\(randomPastStoryStartPhrase) \(randomTimeIndicator) \(Phrases.pastStoryEndPhrase)?"
+            newPastStorytellingTask += "\(randomTimeIndicator) \(Phrases.pastStoryEndPhrase)?"
         }
         
         //save new created phrase
         playersTaskPhrase = newPastStorytellingTask
     }
     
+    func improvePhrase(with timeIndicator: String) -> String {
+        return "\(timeIndicator)?"
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the player's task

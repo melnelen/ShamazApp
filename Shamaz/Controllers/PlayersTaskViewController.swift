@@ -13,7 +13,7 @@ class PlayersTaskViewController: UIViewController {
     @IBOutlet weak var nextPlayerButton: UIButton!
     @IBOutlet weak var playerTaskLabel: UILabel!
     
-    var receivedPhrase = "Player's task"
+    var receivedPhrase = ""
     var nextPlayerPhrase = ""
     var nextPlayerNumber = Int.random(in: 1...10)
     
@@ -23,7 +23,7 @@ class PlayersTaskViewController: UIViewController {
         nextPlayerButton.layer.cornerRadius = Design.buttonRadius
         nextPlayerButton.backgroundColor = .white
         nextPlayerButton.setTitleColor(Design.primaryThemeColor, for: [])
-        nextPlayerButton.setTitle("Who's NeXT?", for: [])
+        nextPlayerButton.setTitle("\(Phrases.nextButton)", for: [])
         
         playerTaskLabel.textColor = Design.textColor
         playerTaskLabel.font = Design.labelFont
@@ -31,7 +31,7 @@ class PlayersTaskViewController: UIViewController {
     }
     
     @IBAction func generateNextPlayer(_ sender: Any) {
-        nextPlayerPhrase = "Ready, Player " + String(nextPlayerNumber) + "?"
+        nextPlayerPhrase = "\(Phrases.nextPlayer) \(nextPlayerNumber)?"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
