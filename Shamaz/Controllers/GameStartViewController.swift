@@ -36,13 +36,8 @@ class GameStartViewController: UIViewController {
     }
     
     @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
-        //generate random future story start phrase
-        let randomFutureStoryStartPhraseIndex = Int.random(in: 0..<Phrases.futureStoryStartPhrases.count)
-        let randomFutureStoryStartPhrase = Phrases.futureStoryStartPhrases[randomFutureStoryStartPhraseIndex]
-        
-        //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
-        let randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomFutureStoryStartPhrase = generateRandom(storyStartPhrase: Phrases.futureStoryStartPhrases)
+        let randomTimeIndicator = generateRandomTimeIndicator()
         
         //create the new future storytelling task pharase
         var newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) "
@@ -64,13 +59,8 @@ class GameStartViewController: UIViewController {
     }
     
     @IBAction func generetePastStorytellingTask(_ sender: Any) {
-        //generate random past story start phrase
-        let randomPastStoryStartPhraseIndex = Int.random(in: 0..<Phrases.pastStoryStartPhrases.count)
-        let randomPastStoryStartPhrase = Phrases.pastStoryStartPhrases[randomPastStoryStartPhraseIndex]
-        
-        //generate random time indicator
-        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
-        let randomTimeIndicator = Phrases.timeIndicators[randomTimeIndicatorIndex]
+        let randomPastStoryStartPhrase = generateRandom(storyStartPhrase: Phrases.pastStoryStartPhrases)
+        let randomTimeIndicator = generateRandomTimeIndicator()
         
         //create the new future storytelling task pharase
         var newPastStorytellingTask = "\(randomPastStoryStartPhrase) "
@@ -91,10 +81,23 @@ class GameStartViewController: UIViewController {
         playersTaskPhrase = newPastStorytellingTask
     }
     
-    func improvePhrase(with timeIndicator: String) -> String {
+    //add a time indicator to a phrase
+    private func improvePhrase(with timeIndicator: String) -> String {
         return "\(timeIndicator)?"
     }
     
+    //generate random time indicator
+    private func generateRandomTimeIndicator() -> String {
+        let randomTimeIndicatorIndex = Int.random(in: 0..<Phrases.timeIndicators.count)
+        return Phrases.timeIndicators[randomTimeIndicatorIndex]
+    }
+    
+    //generate random story start phrase
+    private func generateRandom(storyStartPhrase storyStartPhrases: [String]) -> String {
+        let randomPastStoryStartPhraseIndex = Int.random(in: 0..<storyStartPhrases.count)
+        return storyStartPhrases[randomPastStoryStartPhraseIndex]
+    }
+        
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //modify the label for the player's task
         let newVC: PlayersTaskViewController = segue.destination as! PlayersTaskViewController

@@ -15,7 +15,7 @@ class PlayersTaskViewController: UIViewController {
     
     var receivedPhrase = ""
     var nextPlayerPhrase = ""
-    var nextPlayerNumber = Int.random(in: 1...10)
+    private var nextPlayerNumber = Int.random(in: 1...10)
     
     override func viewDidLoad() {
         super.viewDidLoad()
