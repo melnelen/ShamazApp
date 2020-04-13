@@ -35,11 +35,11 @@ class GameStartViewController: UIViewController {
         nextPlayer.text = receivedPhrase
     }
     
-    @IBAction func genereteFutureStorytellingTask(_ sender: Any) {
+    @IBAction func generateFutureStorytellingTask(_ sender: Any) {
         let randomFutureStoryStartPhrase = generateRandom(storyStartPhrase: Phrases.futureStoryStartPhrases)
         let randomTimeIndicator = generateRandomTimeIndicator()
         
-        //create the new future storytelling task pharase
+        //create the new future storytelling task phrase
         var newFutureStorytellingTask = "\(randomFutureStoryStartPhrase) "
         switch randomTimeIndicator {
         case Phrases.oneDay:
@@ -58,11 +58,11 @@ class GameStartViewController: UIViewController {
         playersTaskPhrase = newFutureStorytellingTask
     }
     
-    @IBAction func generetePastStorytellingTask(_ sender: Any) {
+    @IBAction func generatePastStorytellingTask(_ sender: Any) {
         let randomPastStoryStartPhrase = generateRandom(storyStartPhrase: Phrases.pastStoryStartPhrases)
         let randomTimeIndicator = generateRandomTimeIndicator()
         
-        //create the new future storytelling task pharase
+        //create the new future storytelling task phrase
         var newPastStorytellingTask = "\(randomPastStoryStartPhrase) "
         switch randomTimeIndicator {
         case Phrases.oneDay:
