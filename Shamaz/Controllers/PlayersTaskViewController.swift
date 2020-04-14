@@ -32,6 +32,7 @@ class PlayersTaskViewController: UIViewController {
     
     @IBAction func generateNextPlayer(_ sender: Any) {
         nextPlayerPhrase = "\(Phrases.nextPlayer) \(nextPlayerNumber)?"
+        presentingViewController?.dismiss(animated: true, completion: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
