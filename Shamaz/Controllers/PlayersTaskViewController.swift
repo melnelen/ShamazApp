@@ -14,8 +14,7 @@ class PlayersTaskViewController: UIViewController {
     @IBOutlet weak var playerTaskLabel: UILabel!
     
     var receivedPhrase = ""
-    var nextPlayerPhrase = ""
-    private var nextPlayerNumber = Int.random(in: 1...10)
+    var gameStart: GameStartViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +30,7 @@ class PlayersTaskViewController: UIViewController {
     }
     
     @IBAction func generateNextPlayer(_ sender: Any) {
-        nextPlayerPhrase = "\(Phrases.nextPlayer) \(nextPlayerNumber)?"
-        presentingViewController?.dismiss(animated: true, completion: nil)
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //modify the label for the next player
-        let newVC: GameStartViewController = segue.destination as! GameStartViewController
-        newVC.receivedPhrase = nextPlayerPhrase
+        gameStart.nextPlayer.text = "\(Phrases.nextPlayer) \(Int.random(in: 1...10))?"
+        dismiss(animated: true)
     }
 }
