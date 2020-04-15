@@ -14,8 +14,12 @@ class GameStartViewController: UIViewController {
     @IBOutlet weak var pastButton: UIButton!
     @IBOutlet weak var nextPlayer: UILabel!
     
-    var playersTaskPhrase = ""
-    var receivedPhrase = "\(Phrases.nextPlayer) 1?"
+    private var playersTaskPhrase = ""
+    
+    //change the status bar color to light
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +36,7 @@ class GameStartViewController: UIViewController {
         
         nextPlayer.textColor = Design.textColor
         nextPlayer.font = Design.labelFont
-        nextPlayer.text = receivedPhrase
+        nextPlayer.text = "\(Phrases.nextPlayer) 1?"
     }
     
     @IBAction func generateFutureStorytellingTask(_ sender: Any) {
@@ -102,5 +106,6 @@ class GameStartViewController: UIViewController {
         //modify the label for the player's task
         let newVC: PlayersTaskViewController = segue.destination as! PlayersTaskViewController
         newVC.receivedPhrase = playersTaskPhrase
+        newVC.gameStart = self
     }
 }
